@@ -2,10 +2,14 @@
 Comprehensive pytest suite for D&D Character Tracker
 Tests Character, Drunkard, Avatar, Battler, and BST classes
 """
+import sys
+from pathlib import Path
+
+# Add src to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 import pytest
-from DnD_character import Character, Drunkard, Avatar, Battler, RelationshipStatus, XP_LEVEL_UP_THRESHOLD, DrunkardConstants
-from DnD_bst import BST, Node
+from dnd_tracker import Character, Drunkard, Avatar, Battler, RelationshipStatus, XP_LEVEL_UP_THRESHOLD, DrunkardConstants, BST, Node
 
 
 # ==================== FIXTURES ====================

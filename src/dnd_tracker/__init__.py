@@ -14,7 +14,7 @@ Classes:
     UI: User interface for the character tracker
 """
 
-from .character import Character, Drunkard, Avatar, Battler, RelationshipStatus
+from .character import Character, Drunkard, Avatar, Battler, RelationshipStatus, XP_LEVEL_UP_THRESHOLD, DrunkardConstants
 from .bst import BST, Node
 
 __version__ = "1.0.0"
@@ -25,6 +25,8 @@ __all__ = [
     "Avatar",
     "Battler",
     "RelationshipStatus",
+    "XP_LEVEL_UP_THRESHOLD",
+    "DrunkardConstants",
     "BST",
     "Node",
 ]

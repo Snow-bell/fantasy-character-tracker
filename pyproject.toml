@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68.0", "wheel"]
+requires = ["setuptools>=72.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,9 +8,9 @@ version = "1.0.0"
 description = "Fantasy RPG character tracker built with OOP principles, polymorphic class hierarchies, and Binary Search Trees for efficient character management."
 readme = "README.md"
 requires-python = ">=3.12"
-license = {text = "Apache-2.0"}
+license = "Apache-2.0"
 authors = [
-    name = "Michael Bell"
+    {name = "Michael Bell"}
 ]
 keywords = ["bst", "binary-search-tree", "character-tracker", "oop", "polymorphism"]
 classifiers = [
@@ -48,7 +48,7 @@ packages = ["dnd_tracker"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-addopts = "-v --cov=src/dnd_tracker --cov-report=term-local --cov-report=html"
+addopts = "-v --cov=src/dnd_tracker --cov-report=term-missing --cov-report=html"
 
 [tool.black]
 line-length = 100

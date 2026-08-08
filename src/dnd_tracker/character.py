@@ -1,24 +1,16 @@
-#DnD_character.py
-
-#NOTE STILL NEED TO IMPLEMENT NUMPY LIST: Maybe use an array to store the drinking history of a drunkard
-#Or use it to store a list of three weapons or spells that battler can have on them
-
 """
-# Author: Michael Bell
-# Core Hierarchy File
+Character class hierarchy for the Fantasy Character Tracker.
 
-This file contains the base class and derived class for the D&D characters.
-The base class will have the data for each characters name, level, xp (experience points), hp (hit points), class, and race.
+Defines the base Character class and three polymorphic subclasses:
+- Drunkard: BAC system, tavern brawls, alcohol mechanics
+- Avatar: Relationships, professions, roleplay stats
+- Battler: Weapons, armor, spells, combat mechanics
 
-The different types of characters:
--- Drunkard: Tracks a character that loves alcohol and how many drinks they've had and their BAC (Blood Alcohol Content)
--- Avatar: Tracks roleplaying stats for a purely roleplaying character (alignment, relationship status, etc.)
--- Battler: Tracks a battle focused character (weapon, armor class, a spell)
-
-There is detailed information about each class above their declaration
+All characters have level, XP, HP, name, class, and race.
+Characters are compared by level (primary) then XP (tiebreaker) for BST sorting.
 """
 
-from random import uniform, randint # both used in Drunkard(Character) class
+from random import uniform, randint 
 from enum import Enum
 
 XP_LEVEL_UP_THRESHOLD = 100
@@ -114,7 +106,7 @@ class Character:
 
     def level_up(self) -> None:
         """Increase level if XP >= 100, then reset XP counter."""
-        if self._xp >= XP_LEVEL_UP_THRESHOLD:
+        while self._xp >= XP_LEVEL_UP_THRESHOLD:
             self._level += 1
             self._xp -= XP_LEVEL_UP_THRESHOLD
             

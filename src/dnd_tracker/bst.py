@@ -7,7 +7,7 @@ Name-based retrieval searches the entire tree (not just BST ordering).
 """
 
 from __future__ import annotations
-from DnD_character import Character, Drunkard, Avatar, Battler
+from .character import Character, Drunkard, Avatar, Battler
 
 
 class Node:
