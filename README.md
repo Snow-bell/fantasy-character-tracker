@@ -22,6 +22,19 @@ pip install -e .
 pip install -e ".[dev]"  # for testing
 ```
 
+## Dependencies
+
+### Runtime
+- Python 3.12+
+
+### Development
+- pytest >= 7.0
+- pytest-cov >= 4.0
+- black >= 23.0 (code formatting)
+- flake8 >= 6.0 (linting)
+
+All dev dependencies are optional and listed in `pyproject.toml`.
+
 ## Usage
 
 Run the application:
